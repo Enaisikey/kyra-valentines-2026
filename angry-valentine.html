@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woww...</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #ffd0d9, #ffb7c9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .shape-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .shape-bg span {
+            position: absolute;
+            display: block;
+            background: rgba(255, 180, 200, 0.3);
+            border-radius: 50% 50% 40% 60%;
+            animation: float 12s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        .shape-bg span:nth-child(1) { width: 200px; height: 200px; top: 10%; left: 5%; }
+        .shape-bg span:nth-child(2) { width: 180px; height: 180px; bottom: 10%; right: 5%; }
+        .shape-bg span:nth-child(3) { width: 150px; height: 150px; top: 60%; left: 70%; }
+
+        .angry-card {
+            position: relative;
+            z-index: 10;
+            max-width: 650px;
+            width: 100%;
+            background: rgba(255, 235, 245, 0.85);
+            backdrop-filter: blur(14px);
+            border-radius: 70px 70px 60px 60px;
+            box-shadow: 0 25px 45px rgba(200, 80, 120, 0.4),
+                        0 0 0 3px white inset;
+            padding: 3rem 2.5rem;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+        }
+
+        h1 {
+            font-size: 5rem;
+            color: #b3446c;
+            margin-bottom: 0.5rem;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+        }
+
+        .angry-icon {
+            font-size: 6rem;
+            color: #ff6b8b;
+            margin: 1rem 0;
+            filter: drop-shadow(0 8px 10px #ffa5b9);
+        }
+
+        .message {
+            font-size: 2rem;
+            color: #a53860;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 1.5rem;
+            border-radius: 50px;
+            margin: 2rem 0;
+            border: 3px dashed #ff87a5;
+        }
+
+        .btn-back {
+            background: #ffb0c3;
+            color: #832f50;
+            border: none;
+            font-size: 2rem;
+            padding: 1rem 3rem;
+            border-radius: 60px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 8px 0 #b34b6b, 0 10px 20px #ffa5bc;
+            border: 2px solid white;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-back:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 13px 0 #b34b6b, 0 15px 25px #ffb0c9;
+        }
+
+        .small-note {
+            margin-top: 2rem;
+            color: #b3446c;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="shape-bg">
+        <span></span><span></span><span></span>
+    </div>
+
+    <main class="angry-card">
+        <div class="angry-icon">
+            <i class="fas fa-angry"></i> <i class="fas fa-heart-broken"></i>
+        </div>
+        
+        <div class="message">
+            Wowww... Ok. I see how it is. <br>
+            <span style="font-size: 1.8rem;">Choose again wisely or you'll get spanked.</span>
+        </div>
+
+        <p style="font-size:1.6rem; margin-bottom:1.5rem; color:#ad3f60;">
+            ⚠️ NIKA'S HEART BROKEN ALERT ⚠️
+        </p>
+
+        <button class="btn-back" onclick="window.location.href='will-you-be-my-valentine.html'">
+            <i class="fas fa-arrow-left"></i> go back and choose YES <i class="fas fa-heart"></i>
+        </button>
+
+        <div class="small-note">
+            (please? 😔)
+        </div>
+    </main>
+</body>
+</html>
